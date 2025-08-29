@@ -20,7 +20,7 @@ function Userlogin({ navigation }) {
     const t = await AsyncStorage.getItem('token');
     setToken(t);
     if (t != null) {
-      navigation.navigate('drawer');
+      navigation.replace('drawer');
     }
   }
   useEffect(() => {
