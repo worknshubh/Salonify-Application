@@ -15,6 +15,7 @@ function Salonservice(props) {
         backgroundColor: '#eee',
         padding: 30,
         borderRadius: 10,
+        elevation: 1,
       }}
     >
       <Image
@@ -52,9 +53,10 @@ function Salonservice(props) {
         style={{
           backgroundColor: '#ddd',
           paddingHorizontal: 25,
-          paddingVertical: 18,
+          paddingVertical: 13,
           borderRadius: 10,
           margin: 20,
+          elevation: 1,
         }}
       >
         <Text style={{ fontSize: 17 }}>Book Now</Text>

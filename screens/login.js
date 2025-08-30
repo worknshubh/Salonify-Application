@@ -27,8 +27,9 @@ function Userlogin({ navigation }) {
     checkforToken();
   }, []);
   async function verifyandredirect() {
+    console.log('pressed');
     const res = await fetch(
-      'https://salonify-backend.vercel.app/api/auth/user/signin',
+      'https://salonify-backend.vercel.app/api/auth/user/mobile/signin',
       {
         method: 'POST',
         headers: {
@@ -45,7 +46,7 @@ function Userlogin({ navigation }) {
     console.log(output);
     if (output.success === true) {
       await AsyncStorage.setItem('token', output.token);
-      navigation.navigate('drawer');
+      navigation.replace('drawer');
     } else {
       console.log('Invalid UserEmail and Password');
     }
