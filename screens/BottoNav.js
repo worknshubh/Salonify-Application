@@ -3,17 +3,30 @@ import Home from './home';
 import Bookings from './Bookings';
 import Profile from './Profile';
 import { Image } from 'react-native';
+import { heightPercentageToDP } from 'react-native-responsive-screen';
 
 function BottomNav() {
   const Bottomtab = createBottomTabNavigator();
 
   return (
-    <Bottomtab.Navigator>
+    <Bottomtab.Navigator
+      screenOptions={{
+        tabBarStyle: {
+          marginBottom: heightPercentageToDP('5%'),
+          margin: 20,
+          borderRadius: 15,
+          position: 'absolute',
+          height: heightPercentageToDP('8%'),
+        },
+        tabBarItemStyle: {},
+      }}
+    >
       <Bottomtab.Screen
         name="Home"
         component={Home}
         options={{
           headerShown: false,
+
           tabBarIcon: ({ focused, size }) => {
             return (
               <Image

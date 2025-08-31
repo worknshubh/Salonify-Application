@@ -6,7 +6,7 @@ import {
 } from 'react-native-responsive-screen';
 import LottieView from 'lottie-react-native';
 function Profile() {
-  const [everythingLoaded, setEverythingloaded] = useState(true);
+  const [everythingLoaded, setEverythingloaded] = useState(false);
   const [Userdata, setUserdata] = useState(null);
   async function fetchUserInfo() {
     const res = await fetch(
@@ -19,6 +19,7 @@ function Profile() {
     const output = await res.json();
     setUserdata(output);
     console.log(output);
+    setEverythingloaded(true);
   }
   useEffect(() => {
     fetchUserInfo();

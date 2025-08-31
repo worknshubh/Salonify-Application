@@ -2,6 +2,7 @@ import React from 'react';
 import { View, Text } from 'react-native';
 import Home from './screens/home';
 import Drawermenu from './screens/Drawer';
+import ApperanceTab from './screens/ProfileSettings';
 import Userlogin from './screens/login';
 import {
   createStaticNavigation,
@@ -22,6 +23,13 @@ function App() {
           name="drawer"
           component={Drawermenu}
           options={{ headerShown: false }}
+        ></Stack.Screen>
+        <Stack.Screen
+          name="apperanceTab"
+          component={ApperanceTab}
+          options={{
+            headerTitle: 'Apperance',
+          }}
         ></Stack.Screen>
       </Stack.Navigator>
     </NavigationContainer>

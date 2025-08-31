@@ -16,6 +16,7 @@ function Salonlistcard(props) {
           flexDirection: 'row',
           justifyContent: 'center',
           alignItems: 'center',
+          marginLeft: 20,
         }}
       >
         {props.salonData.userImage === null ? (
@@ -54,8 +55,8 @@ const styles = StyleSheet.create({
 
     margin: 10,
     borderRadius: 10,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: 'flex-start',
+    alignItems: 'flex-start',
     flex: 1,
     paddingBottom: 30,
   },
@@ -63,6 +64,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
     marginTop: 20,
     marginBottom: 20,
+    marginLeft: 8,
   },
 });
 export default Salonlistcard;
